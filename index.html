@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>PostTest jQuery Krisna</title>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            $("#satu1").click(function(){
+                $("#satu").toggle();
+            });
+
+            $("#dua").mouseenter(function(){
+                $("#dua1").toggle();
+            });
+
+            $("#tiga").hover(function(){
+                $(this).css("background-color", "pink");   
+            });
+
+            $("input").focus(function(){
+                $(this).css("background-color", "purple");
+            });
+            $("input").blur(function(){
+                $(this).css("background-color", "black");
+            });
+
+            $("#empat").click(function(){
+                $("#empat1").slideToggle("slow");
+            });
+
+            $("#lima").click(function(){
+                $("#lima1").animate({
+                    left: '200px',
+                    opacity: '0.5',
+                    height: '150px',
+                    width: '150px'
+                });
+            });
+
+            $("#start").click(function(){
+                $("#enam").animate({left: '300px'}, 5000);
+            });
+            $("#stop").click(function(){
+                $("#enam").stop(true);
+            });
+        });
+    </script>
+
+    <h3>Contoh Selector jQuery</h3>
+    <!-- jadi jika klik button akan memunculkan ataupun menyembunyikan teks -->
+    <p id="satu">Ini adalah contoh event click menggunakan toggle dan selector pada id</p>
+    <button id="satu1">Klik</button>
+
+    <h3>Contoh Events dan Effects jQuery</h3>
+    <!-- jika mouse menyentuh area teks akan memunculkan ataupun menyembunyikan teks -->
+    <p id="dua" style="background-color: aqua;">Ini contoh events mouseenter</p>
+    <p id="dua1">Ini hasil mouseenter</p>
+
+    <!-- fungsinya sama dengan mouseenter, jika berada pada area teks akan berubah warna -->
+    <p id="tiga" style="background-color: red;">Ini adalah contoh events hover</p>
+
+    <!-- selanjutnya adalah contoh focus dan blur, yang fungsinya seperti namanya -->
+    Contoh focus dan blur    : <input type="text" name="nama">
+    <br><br>
+
+    <!-- berikut ini adalah contoh slide effect pada jQuery menggunakan slideToggel -->
+    <div id="empat">Klik Disini</div>
+    <div id="empat1" style="background-color: yellow;">Ini hasilnya slide</div>
+    <br><br>
+
+    <!-- ini adalah contoh animate  -->
+    <button id="lima">Klik Disini</button>
+    <div id="lima1">Ini adalah hasil animate effect pada jQuery</div>
+    <br><br>
+
+    <!-- ini contoh effect start dan stop -->
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <div id="enam" style="background: violet; height: 100px; width: 100px; position: absolute;">Hasilnya</div>
+</body>
+</html>
